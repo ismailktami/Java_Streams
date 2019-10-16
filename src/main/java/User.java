@@ -7,6 +7,16 @@ public class User{
     private String usernmae;
     private String password;
     private int age=20;
+    private double salaire;
+
+    public double getSalaire() {
+        return salaire;
+    }
+
+    public void setSalaire(double salaire) {
+        this.salaire = salaire;
+    }
+
     public int getAge() {
         return age;
     }
@@ -37,11 +47,12 @@ public class User{
         this.usernmae=usernmae;
         this.password=password;
     }
-    public User(String usernmae,String password,int age,List<String> phones){
+    public User(String usernmae,String password,int age,double salaire,List<String> phones){
         this.usernmae=usernmae;
         this.password=password;
         this.phones=phones;
         this.age=age;
+        this.salaire=salaire;
     }
     @Override
     public String toString() {
@@ -50,10 +61,10 @@ public class User{
 
     static HashMap<Long,User> getUsers(){
         HashMap<Long,User> collections=new HashMap<Long, User>();
-        collections.put((long)1,new User("ismail","ktami",20, Arrays.asList("0606060612","222222222")));
-        collections.put((long)3,new User("hassan","ktami",45, Arrays.asList("0606074612","1111111111")));
-        collections.put((long)4,new User("ibrahim","ktami",12, Arrays.asList("0606880612","9999999999")));
-        collections.put((long)5,new User("khalid","ktami",47, Arrays.asList("0606099612","1245745852")));
+        collections.put((long)1,new User("ismail","ktami",20, 55555,Arrays.asList("0606060612","222222222")));
+        collections.put((long)3,new User("hassan","ktami",45, 124578,Arrays.asList("0606074612","1111111111")));
+        collections.put((long)4,new User("ibrahim","ktami",12,100000, Arrays.asList("0606880612","9999999999")));
+        collections.put((long)5,new User("khalid","ktami",47,20666 ,Arrays.asList("0606099612","1245745852")));
         return collections;
     }
 

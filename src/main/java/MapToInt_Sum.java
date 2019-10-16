@@ -6,8 +6,7 @@ public class MapToInt_Sum  {
         HashMap<Long,User> users=User.getUsers();
 
         //Moyen age dans HashMap<Long,User> avec API stream
-        int moyen_age=users.values().stream().mapToInt(User::getAge).sum()/users.size();
+        int moyen_age=users.values().stream().skip(1).mapToInt(User::getAge).sum()/users.size();
         System.out.println(moyen_age);
-
     }
 }
